@@ -1,0 +1,35 @@
+--------------- Rebuild Started: 07/18/2019 13:15:57 Project: main.c, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM0\ARM_GCC_541\Debug\main.o
+main.c: In function 'main':
+main.c:16:5: warning: implicit declaration of function 'PWM_Servo_Start' [-Wimplicit-function-declaration]
+     PWM_Servo_Start();
+     ^
+main.c:17:5: warning: implicit declaration of function 'Clock_Start' [-Wimplicit-function-declaration]
+     Clock_Start();
+     ^
+main.c:23:20: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+         for(x=12000, x<=30000; x+=500);{
+                    ^
+main.c:23:38: error: expected ';' before ')' token
+         for(x=12000, x<=30000; x+=500);{
+                                      ^
+main.c:24:13: warning: implicit declaration of function 'PWM_Servo_WriteCompare' [-Wimplicit-function-declaration]
+             PWM_Servo_WriteCompare(x);
+             ^
+main.c:27:13: warning: implicit declaration of function 'CyDelay' [-Wimplicit-function-declaration]
+             CyDelay(300);
+             ^
+The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
+main.c:29:24: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+             for(x=29600, x<=12000; x+=500);{
+                        ^
+main.c:29:42: error: expected ';' before ')' token
+             for(x=29600, x<=12000; x+=500);{
+                                          ^
+main.c:19:19: warning: variable 'z' set but not used [-Wunused-but-set-variable]
+     int x=12000,y,z;
+                   ^
+main.c:19:17: warning: variable 'y' set but not used [-Wunused-but-set-variable]
+     int x=12000,y,z;
+                 ^
+--------------- Rebuild Failed: 07/18/2019 13:15:57 ---------------
